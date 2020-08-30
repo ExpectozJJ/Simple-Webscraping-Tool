@@ -19,9 +19,6 @@ def get_hp(s):
             
     return int(your_hp)
 
-#driver = webdriver.Chrome(executable_path="/mnt/c/Users/wee_j/Documents/Python Notebooks/chromedriver/chromedriver.exe", options=chrome_options)
-#driver.close()
-#driver.quit()
 driver = webdriver.Chrome(executable_path="chromedriver.exe", options=chrome_options)
 driver.get('https://www.tppcrpg.net/login.php') # URL destination 
 time.sleep(2)
@@ -35,8 +32,8 @@ while 1:
 
     driver.find_element_by_link_text("Trainer Battle").click()
     time.sleep(2)
-#99561np.random.choice(["2719620", "3387834"])
-    driver.find_element_by_name("Trainer").send_keys("3395547") # Change the trainer ID you want to battle with 
+
+    driver.find_element_by_name("Trainer").send_keys("num") # Change the trainer ID you want to battle with 
     driver.find_element_by_xpath("//input[@type='submit']").click()
     time.sleep(2)
 
